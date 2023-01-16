@@ -13,6 +13,7 @@
   "type": "module",
   "dependencies": {
     "chiron": "chevyboys/chiron",
+    "chironbot": "^0.0.5",
     "discord.js": "^14.7.1"
   },
   "devDependencies": {

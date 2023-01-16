@@ -1,4 +1,4 @@
-import { ChironModule, SlashCommandComponent } from "chiron/dist/Classes/Module/Module";
+import { ChironModule, MessageCommandComponent, SlashCommandComponent } from "chiron/dist/Classes/Module/Module";
 import { SlashCommandBuilder } from "discord.js";
 export const Module = new ChironModule({
     name: "hello world",
@@ -10,6 +10,17 @@ export const Module = new ChironModule({
             permissions: (interaction) => { return true; },
             process: (interaction) => {
                 interaction.isRepliable() ? interaction.reply("Pong!") : console.error("could not reply");
+            }
+        }),
+        new MessageCommandComponent({
+            name: "hello",
+            description: "replies with 'world'",
+            category: "main",
+            enabled: true,
+            permissions: (msg) => true,
+            process: (msg, suffix) => {
+                msg.reply("world! " + suffix);
+                return "";
             }
         })
     ]

@@ -8,3 +8,5 @@ src/config/*
 *-.ts
 # For Visual Studio's temp directory
 package-lock.json
+dist/config/config.json
+dist/config/config.js

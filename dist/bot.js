@@ -1,10 +1,8 @@
 import { ChironConfig } from "chiron/dist/Classes/ChironConfig";
 import { ChironClient } from "chiron/dist/Classes/ChironClient";
 import { Partials, GatewayIntentBits } from "discord.js";
-import { configOptions } from "./config/config"
-import path from "path";
-
-const config = new ChironConfig(configOptions)
+import { configOptions } from "./config/config";
+const config = new ChironConfig(configOptions);
 const client = new ChironClient({
     config: config,
     color: "#FFFFFF",

@@ -2,17 +2,26 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Example",
+      "name": "main",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
-
-      "args": ["src/bot.ts"],
-      
+      "runtimeArgs": [
+        "--nolazy",
+        "-r",
+        "ts-node/register/transpile-only"
+      ],
+      "args": [
+        "--experimental-specifier-resolution=node",
+        "dist/bot.js"
+      ],
+      "preLaunchTask": "Build",
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "openOnSessionStart",
-      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+      "skipFiles": [
+        "<node_internals>/**",
+        "node_modules/**"
+      ]
     }
   ]
 }

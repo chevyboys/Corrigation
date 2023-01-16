@@ -1,4 +1,5 @@
-import { ChironClient } from "Chiron/src/Classes/ChironClient"
+
+import { ChironClient } from "chiron";
 import { Partials, GatewayIntentBits } from "discord.js"
 import * as config from "./config/config.json" assert { type: 'json'};
 

@@ -1,0 +1,10 @@
+node_modules
+tmp
+src/config/*
+!src/config/README.md
+!src/config/*-example.json
+*-.js
+*-.json
+*-.ts
+# For Visual Studio's temp directory
+package-lock.json

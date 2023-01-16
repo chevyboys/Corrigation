@@ -1,0 +1,28 @@
+{
+  "name": "corrigation",
+  "version": "0.0.1",
+  "description": "Discord Bot",
+  "main": "src/Bot.ts",
+  "scripts": {
+    "start": "ts-node-esm src/Bot.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chevyboys/Corrigation.git"
+  },
+  "dependencies": {
+    "Chiron": "chevyboys/Chiron",
+    "discord.js": "^14.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "author": "Nick Chevalier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chevyboys/Corrigation/issues"
+  },
+  "homepage": "https://github.com/chevyboys/Corrigation#readme"
+}

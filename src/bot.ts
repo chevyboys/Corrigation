@@ -1,5 +1,4 @@
-import { ChironConfig } from "chiron/dist/Classes/ChironConfig";
-import { ChironClient } from "chiron/dist/Classes/ChironClient";
+import { ChironConfig, ChironClient } from "chiron";
 import { Partials, GatewayIntentBits } from "discord.js";
 import { configOptions } from "./config/config"
 
@@ -17,8 +16,6 @@ const client = new ChironClient({
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMembers,
     ],
-    DEBUG: true,
-    smiteArray: ["940148285300178954"]
 });
 await client.login(config.token);
 client.modules.register();

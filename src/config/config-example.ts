@@ -4,5 +4,6 @@ export const configOptions = {
     database: {},
     repo: new URL(""),
     token: "",
-    adminServer: ""
+    adminServer: "",
+    DEBUG: false
 };

@@ -2,6 +2,7 @@ import { ChironModule } from "chiron";
 import { HelloWorldContextMenu } from "./helloWorld/contextMenu";
 import { HelloWorldEventComponent } from "./helloWorld/event";
 import { HelloWorldMessageButtonSender, HelloWorldMessageComponentInteraction } from "./helloWorld/messageComponentInteraction";
+import { HelloWorldScheduleComponent } from "./helloWorld/scheduledJobs";
 import { HelloWorldSlashCommand } from "./helloWorld/slashCommand";
 import { HelloWorldTextCommand } from "./helloWorld/textCommand";
 export const Module = new ChironModule({
@@ -12,6 +13,7 @@ export const Module = new ChironModule({
         HelloWorldEventComponent,
         HelloWorldContextMenu,
         HelloWorldMessageButtonSender,
-        HelloWorldMessageComponentInteraction
+        HelloWorldMessageComponentInteraction,
+        HelloWorldScheduleComponent
     ]
 });

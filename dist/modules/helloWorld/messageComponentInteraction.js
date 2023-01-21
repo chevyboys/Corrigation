@@ -3,6 +3,7 @@ import { ActionRowBuilder, ButtonBuilder, ButtonInteraction, ButtonStyle, Comman
 export const HelloWorldMessageComponentInteraction = new MessageComponentInteractionComponent({
     customId: (id) => id == "exampleid",
     enabled: true,
+    permissions: (interaction) => true,
     process(interaction) {
         if (interaction instanceof ButtonInteraction) {
             interaction.reply({ content: "You pushed me!", ephemeral: true });

@@ -1,4 +1,4 @@
-import { MessageComponentInteractionComponent, SlashCommandComponent } from "chiron";
+import { MessageComponentInteractionComponent, SlashCommandComponent } from "chironbot";
 import { ActionRowBuilder, ButtonBuilder, ButtonInteraction, ButtonStyle, CommandInteraction, SlashCommandBuilder } from "discord.js";
 export const HelloWorldMessageComponentInteraction = new MessageComponentInteractionComponent({
     customId: (id) => id == "exampleid",

@@ -1,4 +1,4 @@
-import { ContextMenuCommandComponent } from "chiron";
+import { ContextMenuCommandComponent } from "chironbot";
 import { ApplicationCommandType, ContextMenuCommandBuilder, MessageContextMenuCommandInteraction } from "discord.js";
 
 

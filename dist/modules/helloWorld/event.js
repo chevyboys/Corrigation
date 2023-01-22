@@ -1,4 +1,4 @@
-import { EventComponent } from "chiron";
+import { EventComponent } from "chironbot";
 import { Events } from "discord.js";
 export let HelloWorldEventComponent = new EventComponent({
     trigger: Events.MessageReactionAdd,

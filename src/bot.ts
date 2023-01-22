@@ -1,4 +1,4 @@
-import { ChironConfig, ChironClient } from "chiron";
+import { ChironConfig, ChironClient } from "chironbot";
 import { Partials, GatewayIntentBits } from "discord.js";
 import { configOptions } from "./config/config"
 

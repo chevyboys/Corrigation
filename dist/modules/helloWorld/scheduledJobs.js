@@ -1,4 +1,4 @@
-import { ChironClient, ScheduleComponent } from "chiron";
+import { ChironClient, ScheduleComponent } from "chironbot";
 import { ChannelType, PermissionFlagsBits } from "discord.js";
 export const HelloWorldScheduleComponent = new ScheduleComponent({
     chronSchedule: '0 * * * * *',

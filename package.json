@@ -4,7 +4,7 @@
   "description": "Discord Bot Example",
   "main": "src/Bot.ts",
   "scripts": {
-    "start": "node --experimental-specifier-resolution=node dist/bot.js"
+    "start": "node dist/bot.js"
   },
   "repository": {
     "type": "git",
@@ -12,16 +12,16 @@
   },
   "type": "module",
   "dependencies": {
-    "chironbot": "^1.0.0",
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.11.0",
+    "project-dominion": "^0.1.14"
   },
   "devDependencies": {
     "@tsconfig/node17": "^1.0.2",
     "@tsconfig/recommended": "^1.0.1",
-    "@types/node": "^18.11.18",
+    "@types/node": "^20.12.0",
     "@types/node-schedule": "^2.1.0",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4"
+    "typescript": "^5.3.2"
   },
   "author": "Nick Chevalier",
   "license": "ISC",

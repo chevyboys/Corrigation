@@ -1,4 +1,4 @@
-import { ChironClient, ModuleOnLoadComponent, ModuleOnUnloadComponent, SlashCommandComponent } from "chironbot";
+import { DominionClient, ModuleOnLoadComponent, ModuleOnUnloadComponent, SlashCommandComponent } from "project-dominion";
 import { SlashCommandBuilder } from "discord.js";
 export let HelloWorldUnregisterSlashCommand = new SlashCommandComponent({
     builder: new SlashCommandBuilder().setName('unregister').setDescription('jetisons this module'),
@@ -6,7 +6,7 @@ export let HelloWorldUnregisterSlashCommand = new SlashCommandComponent({
     category: "main",
     permissions: (interaction) => { return true; },
     process: async (interaction) => {
-        if (HelloWorldUnregisterSlashCommand.module?.client instanceof ChironClient)
+        if (HelloWorldUnregisterSlashCommand.module?.client instanceof DominionClient)
             await HelloWorldUnregisterSlashCommand.module?.client?.modules.unregister(HelloWorldUnregisterSlashCommand.module);
         interaction.isRepliable() ? await interaction.reply("Jettison the module!") : console.error("could not reply");
         console.log("Jettisoned");
@@ -20,7 +20,7 @@ export let Reload = new SlashCommandComponent({
     process: async (interaction) => {
         if (interaction.isRepliable())
             interaction.deferReply();
-        if (Reload.module?.client instanceof ChironClient)
+        if (Reload.module?.client instanceof DominionClient)
             await Reload.module?.client?.modules.reload();
         interaction.isRepliable() ? await interaction.editReply("Reloaded the modules!") : console.error("could not reply");
         console.log("Reloaded all modules");

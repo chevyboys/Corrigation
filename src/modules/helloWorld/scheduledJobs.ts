@@ -1,7 +1,5 @@
-import { ChironClient, ScheduleComponent } from "chironbot";
+import { DominionClient, ScheduleComponent } from "project-dominion";
 import { ChannelType, PermissionFlagsBits, TextChannel } from "discord.js";
-import * as Schedule from "node-schedule";
-
 
 
 export const HelloWorldScheduleComponent = new ScheduleComponent({
@@ -19,7 +17,7 @@ export const HelloWorldScheduleComponent = new ScheduleComponent({
     */
     enabled: true,
     process: async (date: Date) => {
-        if (HelloWorldScheduleComponent.module?.client instanceof ChironClient) {
+        if (HelloWorldScheduleComponent.module?.client instanceof DominionClient) {
             //YOUR CODE HERE
 
 
@@ -32,7 +30,7 @@ export const HelloWorldScheduleComponent = new ScheduleComponent({
             const channel = messageableChannels.find(c => c.name.toLowerCase().indexOf('general') > -1) || messageableChannels.first();
 
             if (channel) {
-                (channel as TextChannel).send("Hello World!")
+                await (channel as TextChannel).send("Hello World!")
                 console.log("Hello World!")
             } else {
                 console.log("Hello world! (I couldn't find a channel to send that in)")

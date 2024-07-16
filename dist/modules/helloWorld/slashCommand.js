@@ -1,4 +1,4 @@
-import { SlashCommandComponent } from "chironbot";
+import { SlashCommandComponent } from "project-dominion";
 import { SlashCommandBuilder } from "discord.js";
 export let HelloWorldSlashCommand = new SlashCommandComponent({
     builder: new SlashCommandBuilder().setName('ping').setDescription('Replies with Pong!'),

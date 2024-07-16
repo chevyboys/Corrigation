@@ -1,12 +1,12 @@
-import { ChironModule } from "chironbot";
-import { HelloWorldContextMenu } from "./helloWorld/contextMenu";
-import { HelloWorldEventComponent } from "./helloWorld/event";
-import { HelloWorldMessageButtonSender, HelloWorldMessageComponentInteraction } from "./helloWorld/messageComponentInteraction";
-import { HelloWorldScheduleComponent } from "./helloWorld/scheduledJobs";
-import { HelloWorldSlashCommand, HelloWorldSecondSlashCommand } from "./helloWorld/slashCommand";
-import { HelloWorldEchoCommand, HelloWorldTextCommand } from "./helloWorld/textCommand";
-import { HelloWorldUnregisterSlashCommand, loaded, Reload, unloaded } from "./helloWorld/loadUnload";
-export const Module = new ChironModule({
+import { DominionModule } from "project-dominion";
+import { HelloWorldContextMenu } from "./helloWorld/contextMenu.js";
+import { HelloWorldEventComponent } from "./helloWorld/event.js";
+import { HelloWorldMessageButtonSender, HelloWorldMessageComponentInteraction } from "./helloWorld/messageComponentInteraction.js";
+import { HelloWorldScheduleComponent } from "./helloWorld/scheduledJobs.js";
+import { HelloWorldSlashCommand, HelloWorldSecondSlashCommand } from "./helloWorld/slashCommand.js";
+import { HelloWorldEchoCommand, HelloWorldTextCommand } from "./helloWorld/textCommand.js";
+import { HelloWorldUnregisterSlashCommand, loaded, Reload, unloaded } from "./helloWorld/loadUnload.js";
+export const Module = new DominionModule({
     name: "hello world",
     components: [
         HelloWorldSlashCommand,

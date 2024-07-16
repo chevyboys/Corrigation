@@ -1,4 +1,4 @@
-import { ContextMenuCommandComponent } from "chironbot";
+import { ContextMenuCommandComponent } from "project-dominion";
 import { ApplicationCommandType, ContextMenuCommandBuilder, MessageContextMenuCommandInteraction } from "discord.js";
 export const HelloWorldContextMenu = new ContextMenuCommandComponent({
     builder: new ContextMenuCommandBuilder().setName("Hello World").setType(ApplicationCommandType.Message),

@@ -1,7 +1,7 @@
-import { ChironClient, ScheduleComponent } from "chironbot";
+import { DominionClient, ScheduleComponent } from "project-dominion";
 import { ChannelType, PermissionFlagsBits } from "discord.js";
 export const HelloWorldScheduleComponent = new ScheduleComponent({
-    chronSchedule: '0 * * * * *',
+    chronSchedule: '0 * * * * *', //runs once every minute
     /*
         *    *    *    *    *    *
         ┬    ┬    ┬    ┬    ┬    ┬
@@ -15,7 +15,7 @@ export const HelloWorldScheduleComponent = new ScheduleComponent({
     */
     enabled: true,
     process: async (date) => {
-        if (HelloWorldScheduleComponent.module?.client instanceof ChironClient) {
+        if (HelloWorldScheduleComponent.module?.client instanceof DominionClient) {
             //YOUR CODE HERE
             //Example code, says hi in a channel named general, or fall back to any other channel the bot can talk in every minute
             const guildId = HelloWorldScheduleComponent.module.client.config.adminServer;
@@ -24,7 +24,7 @@ export const HelloWorldScheduleComponent = new ScheduleComponent({
             const messageableChannels = guildObject?.channels.cache.filter(c => c.type != ChannelType.GuildCategory && c.permissionsFor(botMember ? botMember : guildObject.roles.everyone).has(PermissionFlagsBits.SendMessages));
             const channel = messageableChannels.find(c => c.name.toLowerCase().indexOf('general') > -1) || messageableChannels.first();
             if (channel) {
-                channel.send("Hello World!");
+                await channel.send("Hello World!");
                 console.log("Hello World!");
             }
             else {
